@@ -55,6 +55,9 @@ public class Record {
 	public void setNote(String note) {
 		this.note = note;
 		}
+	public Record() {
+		
+	}
 	public Record(String id, String inizio, String fine, String codiciAula, String note) {
 		this.id = id;
 		this.inizio = inizio;
@@ -73,10 +76,5 @@ public class Record {
 		default:break;
 			}
 		return "";
-		}
-	@Override
-	public String toString() {
-		return "Record [id=" + id + ", inizio=" + inizio + ", fine=" + fine + ", codiciAula=" + codiciAula + ", note="
-				+ note + "]";
 		}
 	}
