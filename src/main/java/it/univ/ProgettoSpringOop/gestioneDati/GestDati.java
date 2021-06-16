@@ -7,7 +7,6 @@ import java.net.URL;
 import java.nio.channels.Channels;
 import java.nio.channels.ReadableByteChannel;
 import java.util.List;
-
 import com.opencsv.bean.CsvToBeanBuilder;
 import it.univ.ProgettoSpringOop.modelli.Record;
 public class GestDati {
@@ -21,11 +20,11 @@ public class GestDati {
 			fos.getChannel().transferFrom(rbc, 0, Long.MAX_VALUE);
 			fos.close();//Non serve più scrivere su disco
 			//System.out.println("Dataset scaricato");
-			FileReader fr = new FileReader("Dataset.csv");//Apre file reader
-			lista.addAll((new CsvToBeanBuilder<Record>(fr).withSeparator(',').withType(Record.class).build().parse()));//Spring parsa il csv
-			fr.close();//Non dovrebbero servire altri inputs
 			}else {
 			System.out.println("Nessun download");
 			}
+		FileReader fr = new FileReader("Dataset.csv");//Apre file reader
+		lista.addAll((new CsvToBeanBuilder<Record>(fr).withSkipLines(1).withSeparator(',').withType(Record.class).build().parse()));//Spring parsa il csv
+		fr.close();//Non dovrebbero servire altri inputs
 		}
 }

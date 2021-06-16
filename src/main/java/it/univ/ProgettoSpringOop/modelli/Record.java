@@ -8,15 +8,15 @@ public class Record {
 	//Questa classe contiene gli attributi del file csv
 	//CODICE,DENOMINAZIONE_RICHIEDENTE,CATEGORIA,TIPOLOGIA,DOMINIO_RIF,PROVINCIA_SEDE,COMUNE_SEDE,TITOLO,MANIFESTAZIONE_INTERESSE,CODICI_EQUIVALENTI
 	//annotazioni che fanno in modo che le variabili vengano associate agli headers del csv in base al nome
-	@CsvBindByPosition(position = 0)
+	@CsvBindByPosition(position=0)
 	private String id;
-	@CsvBindByPosition(position = 1)
+	@CsvBindByPosition(position=1)
 	private String inizio;
-	@CsvBindByPosition(position = 2)
+	@CsvBindByPosition(position=2)
 	private String fine;
-	@CsvBindByPosition(position = 3)
+	@CsvBindByPosition(position=3)
 	private String codiciAula;
-	@CsvBindByPosition(position = 4)
+	@CsvBindByPosition(position=4)
 	private String note;
 	//<!---Getters e setters---!>
 	//Queste annotzioni della libreria jackson serviranno per dare un ordine al json attaverso l'annotazione jsonPropertyOrder
