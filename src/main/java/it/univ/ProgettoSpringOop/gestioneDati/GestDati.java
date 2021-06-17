@@ -7,9 +7,9 @@ import java.lang.reflect.Field;
 import java.net.URL;
 import java.nio.channels.Channels;
 import java.nio.channels.ReadableByteChannel;
+import java.util.ArrayList;
 import java.util.List;
 import com.opencsv.bean.CsvToBeanBuilder;
-
 import it.univ.ProgettoSpringOop.modelli.Metadato;
 import it.univ.ProgettoSpringOop.modelli.Record;
 public class GestDati {
@@ -39,4 +39,31 @@ public class GestDati {
 			lista.add(new Metadato(campi[i].getName().toString(), campi[i].getName().toString(), campi[i].getType().toString()));
 			}
 		}
+	//filtro not - restituisce solo dove non trova il valore
+	public static ArrayList<Record> filtro(List<Record> lista, String campo, String valore){
+		List <Record> listaF = new ArrayList<Record>();
+		for (Record i : lista) {
+			if(!i.getCol(campo).equals(valore)) {
+				listaF.add(i);
+			}
+		}
+		return (ArrayList<Record>) listaF;
+	}
+	//filtro in - Restituisce se matcha un elemento nell' array
+	public static ArrayList<Record> filtro(List<Record> lista, String campo, String [] valori){
+		List <Record> listaF = new ArrayList<Record>();
+		boolean flag = false;
+		for (Record i : lista) {
+			for(int k=0; k<valori.length; k++) {
+				if(i.getCol(campo).equals(valori[k])) {
+					flag=true;
+				}
+				if(flag) {
+					listaF.add(i);
+				}
+				flag=false;
+			}
+		}
+		return (ArrayList<Record>) listaF;
+	}
 	}

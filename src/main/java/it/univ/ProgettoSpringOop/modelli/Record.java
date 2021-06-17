@@ -68,11 +68,11 @@ public class Record {
 	public String getCol(String scelta) {
 		//Questo getter serve per accedere ad un attributo della lista di oggetti in altri metodi attraverso una semplice stringa
 		switch(scelta.toUpperCase()) {
-		case "componente_id":return id;
-		case "inizio":return inizio;
-		case "fine":return fine;
-		case "aula_codici":return codiciAula;
-		case "note":return note;
+		case "COMPONENTE_ID":return id;
+		case "INIZIO":return inizio;
+		case "FINE":return fine;
+		case "AULA_CODICI":return codiciAula;
+		case "NOTE":return note;
 		default:break;
 			}
 		return "";
