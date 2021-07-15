@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_XnhtUOV_EeuwZNte6Paa1A" name="Model" visibility="public">
+  <packagedElement xmi:type="uml:Enumeration" xmi:id="_xh4EkOWBEeuwZNte6Paa1A"/>
+  <packagedElement xmi:type="uml:DataType" xmi:id="_1LMUoOWBEeuwZNte6Paa1A"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="_-ObPsOWBEeuwZNte6Paa1A" name="ProgettoSpringOop.controller">
+    <packagedElement xmi:type="uml:Class" xmi:id="_L2p4kOWFEeuwZNte6Paa1A" name="RestfulController" visibility="public">
+      <ownedOperation xmi:id="_UiFXoOWFEeuwZNte6Paa1A" name="conta">
+        <ownedParameter xmi:id="_aQhhIOWFEeuwZNte6Paa1A" name="col"/>
+        <ownedParameter xmi:id="_acCNkOWFEeuwZNte6Paa1A" name="val"/>
+        <ownedParameter xmi:id="_d_aNsOWFEeuwZNte6Paa1A" name="lista"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_UnKE4OWFEeuwZNte6Paa1A" name="tempo">
+        <ownedParameter xmi:id="_glCMIOWFEeuwZNte6Paa1A" name="op"/>
+        <ownedParameter xmi:id="_gqYmMOWFEeuwZNte6Paa1A" name="col"/>
+        <ownedParameter xmi:id="_guwI0OWFEeuwZNte6Paa1A" name="val"/>
+        <ownedParameter xmi:id="_g-4PgOWFEeuwZNte6Paa1A" name="val2"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_UsBWwOWFEeuwZNte6Paa1A" name="meta">
+        <ownedParameter xmi:id="_lm_qIOWFEeuwZNte6Paa1A" name="lista"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_n8EEEOWFEeuwZNte6Paa1A" name="parsingDati"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_86wDgOWQEeuwZNte6Paa1A" memberEnd="_88OqMOWQEeuwZNte6Paa1A _8-MZEeWQEeuwZNte6Paa1A" navigableOwnedEnd="_8-MZEeWQEeuwZNte6Paa1A">
+      <ownedEnd xmi:id="_88OqMOWQEeuwZNte6Paa1A" name="restfulControllers" type="_L2p4kOWFEeuwZNte6Paa1A" association="_86wDgOWQEeuwZNte6Paa1A">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_89yJYOWQEeuwZNte6Paa1A"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_8-MZEOWQEeuwZNte6Paa1A" value="*"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_8-MZEeWQEeuwZNte6Paa1A" name="gestDatis" type="_7_C8IOWDEeuwZNte6Paa1A" association="_86wDgOWQEeuwZNte6Paa1A">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_8_v4QOWQEeuwZNte6Paa1A"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_8_8FgOWQEeuwZNte6Paa1A" value="*"/>
+      </ownedEnd>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_snwpEOWDEeuwZNte6Paa1A" name="ProgettoSpringOop.gestioneDati">
+    <packagedElement xmi:type="uml:Class" xmi:id="_Xl9VIOWBEeuwZNte6Paa1A" name="GestDati" visibility="public">
+      <ownedOperation xmi:id="_IR7U8OWCEeuwZNte6Paa1A" name="RDdataset">
+        <ownedParameter xmi:id="_LkHecOWCEeuwZNte6Paa1A" name="targetUrl">
+          <ownedComment xmi:id="_PfV94OWCEeuwZNte6Paa1A" annotatedElement="_LkHecOWCEeuwZNte6Paa1A">
+            <body>String</body>
+          </ownedComment>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QZQBYOWCEeuwZNte6Paa1A" value="1"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_L1cfAOWCEeuwZNte6Paa1A" name="lista" visibility="public"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_cOei8OWCEeuwZNte6Paa1A" name="filtro">
+        <ownedParameter xmi:id="_euir8OWCEeuwZNte6Paa1A" name="lista">
+          <ownedComment xmi:id="_gb17QOWCEeuwZNte6Paa1A" annotatedElement="_euir8OWCEeuwZNte6Paa1A">
+            <body>È di tipo List&lt;Record></body>
+          </ownedComment>
+        </ownedParameter>
+        <ownedParameter xmi:id="_jTv8gOWCEeuwZNte6Paa1A" name="campo">
+          <ownedComment xmi:id="_n1aJ0OWCEeuwZNte6Paa1A" annotatedElement="_jTv8gOWCEeuwZNte6Paa1A">
+            <body>È una string che indica la colonna&#xD;
+</body>
+          </ownedComment>
+        </ownedParameter>
+        <ownedParameter xmi:id="_jhZW8OWCEeuwZNte6Paa1A" name="valore">
+          <ownedComment xmi:id="_k-MsIOWCEeuwZNte6Paa1A" annotatedElement="_jhZW8OWCEeuwZNte6Paa1A">
+            <body>È di tipo string&#xD;
+</body>
+          </ownedComment>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_cXbqoOWCEeuwZNte6Paa1A" name="filtro2">
+        <ownedComment xmi:id="_rgtW4OWCEeuwZNte6Paa1A" annotatedElement="_cXbqoOWCEeuwZNte6Paa1A">
+          <body>È utilizzata per l'operatore $in</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_stZzgOWCEeuwZNte6Paa1A" name="lista"/>
+        <ownedParameter xmi:id="_s6SY8OWCEeuwZNte6Paa1A" name="campo"/>
+        <ownedParameter xmi:id="_tJxmcOWCEeuwZNte6Paa1A" name="valore"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_cdi5sOWCEeuwZNte6Paa1A" name="maggiore">
+        <ownedParameter xmi:id="_wys08OWCEeuwZNte6Paa1A" name="lista"/>
+        <ownedParameter xmi:id="_w-i4kOWCEeuwZNte6Paa1A" name="campo"/>
+        <ownedParameter xmi:id="_xHFwkOWCEeuwZNte6Paa1A" name="valore"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_chDgsOWCEeuwZNte6Paa1A" name="minore">
+        <ownedParameter xmi:id="_1D_rAOWCEeuwZNte6Paa1A" name="lista"/>
+        <ownedParameter xmi:id="_1MAXgOWCEeuwZNte6Paa1A" name="campo"/>
+        <ownedParameter xmi:id="_1Qf18OWCEeuwZNte6Paa1A" name="valore"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_ckpAMOWCEeuwZNte6Paa1A" name="operatoreor">
+        <ownedParameter xmi:id="_7kzFkOWCEeuwZNte6Paa1A" name="lista"/>
+        <ownedParameter xmi:id="_7rWZgOWCEeuwZNte6Paa1A" name="campo"/>
+        <ownedParameter xmi:id="_7wexIOWCEeuwZNte6Paa1A" name="valore"/>
+        <ownedParameter xmi:id="_-GBFIOWCEeuwZNte6Paa1A" name="valore2"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_coTYMOWCEeuwZNte6Paa1A" name="conteggio">
+        <ownedComment xmi:id="_kCfcYOWDEeuwZNte6Paa1A" annotatedElement="_coTYMOWCEeuwZNte6Paa1A">
+          <body>Funzione di tipo int che in output restituisce il conteggio del valore cercato&#xD;
+</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_fh0GgOWDEeuwZNte6Paa1A" name="lista"/>
+        <ownedParameter xmi:id="_frXrIOWDEeuwZNte6Paa1A" name="campo"/>
+        <ownedParameter xmi:id="_fwL5sOWDEeuwZNte6Paa1A" name="valore"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_7_C8IOWDEeuwZNte6Paa1A" name="GestDati" visibility="public">
+      <ownedOperation xmi:id="_CGVqgOWEEeuwZNte6Paa1A" name="RDdataset">
+        <ownedParameter xmi:id="_EpiAAOWEEeuwZNte6Paa1A" name="targetUrl"/>
+        <ownedParameter xmi:id="_EwNPwOWEEeuwZNte6Paa1A" name="lista"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_CLBWMOWEEeuwZNte6Paa1A" name="filtro">
+        <ownedParameter xmi:id="_P_Os8OWEEeuwZNte6Paa1A" name="lista"/>
+        <ownedParameter xmi:id="_QQWSIOWEEeuwZNte6Paa1A" name="campo"/>
+        <ownedParameter xmi:id="_QVl-gOWEEeuwZNte6Paa1A" name="valore"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_COSFkOWEEeuwZNte6Paa1A" name="filtro2">
+        <ownedParameter xmi:id="_VS4-8OWEEeuwZNte6Paa1A" name="lista"/>
+        <ownedParameter xmi:id="_VeSWoOWEEeuwZNte6Paa1A" name="campo"/>
+        <ownedParameter xmi:id="_ViPCgOWEEeuwZNte6Paa1A" name="valore"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_CSLuIOWEEeuwZNte6Paa1A" name="maggiore">
+        <ownedParameter xmi:id="_b3xBMOWEEeuwZNte6Paa1A" name="lista"/>
+        <ownedParameter xmi:id="_b-jlsOWEEeuwZNte6Paa1A" name="campo"/>
+        <ownedParameter xmi:id="_cDzSEOWEEeuwZNte6Paa1A" name="valore"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_CWN5kOWEEeuwZNte6Paa1A" name="minore">
+        <ownedParameter xmi:id="_fn65EOWEEeuwZNte6Paa1A" name="lista"/>
+        <ownedParameter xmi:id="_fs9KEOWEEeuwZNte6Paa1A" name="campo"/>
+        <ownedParameter xmi:id="_f6AuoOWEEeuwZNte6Paa1A" name="valore"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_CaJXUOWEEeuwZNte6Paa1A" name="operatoreor">
+        <ownedParameter xmi:id="_jAYCoOWEEeuwZNte6Paa1A" name="lista"/>
+        <ownedParameter xmi:id="_jG_A8OWEEeuwZNte6Paa1A" name="campo"/>
+        <ownedParameter xmi:id="_jLQc8OWEEeuwZNte6Paa1A" name="valore"/>
+        <ownedParameter xmi:id="_jPKskOWEEeuwZNte6Paa1A" name="valore2"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_ChR6EOWEEeuwZNte6Paa1A" name="conteggio">
+        <ownedParameter xmi:id="_uEJ5IOWEEeuwZNte6Paa1A" name="lista"/>
+        <ownedParameter xmi:id="_uJgTMOWEEeuwZNte6Paa1A" name="campo"/>
+        <ownedParameter xmi:id="_uNXfgOWEEeuwZNte6Paa1A" name="valore"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_E09hAOWREeuwZNte6Paa1A" memberEnd="_E1MKgOWREeuwZNte6Paa1A _E1MxkOWREeuwZNte6Paa1A" navigableOwnedEnd="_E1MxkOWREeuwZNte6Paa1A">
+      <ownedEnd xmi:id="_E1MKgOWREeuwZNte6Paa1A" name="gestDatis" type="_7_C8IOWDEeuwZNte6Paa1A" association="_E09hAOWREeuwZNte6Paa1A">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_E1MKgeWREeuwZNte6Paa1A"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_E1MKguWREeuwZNte6Paa1A" value="*"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_E1MxkOWREeuwZNte6Paa1A" name="records" type="_VA4-EOWGEeuwZNte6Paa1A" association="_E09hAOWREeuwZNte6Paa1A">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_E1MxkeWREeuwZNte6Paa1A"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_E1MxkuWREeuwZNte6Paa1A" value="*"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_F-JWoOWREeuwZNte6Paa1A" memberEnd="_F-lbgOWREeuwZNte6Paa1A _F-mCkOWREeuwZNte6Paa1A" navigableOwnedEnd="_F-mCkOWREeuwZNte6Paa1A">
+      <ownedEnd xmi:id="_F-lbgOWREeuwZNte6Paa1A" name="gestDatis" type="_7_C8IOWDEeuwZNte6Paa1A" association="_F-JWoOWREeuwZNte6Paa1A">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_F-lbgeWREeuwZNte6Paa1A"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_F-lbguWREeuwZNte6Paa1A" value="*"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_F-mCkOWREeuwZNte6Paa1A" name="metadatos" type="_0HPngOWFEeuwZNte6Paa1A" association="_F-JWoOWREeuwZNte6Paa1A">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_F-mCkeWREeuwZNte6Paa1A"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_F-mCkuWREeuwZNte6Paa1A" value="*"/>
+      </ownedEnd>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_vtVoAOWFEeuwZNte6Paa1A" name="ProgettoSpringOop.modelli">
+    <packagedElement xmi:type="uml:Class" xmi:id="_0HPngOWFEeuwZNte6Paa1A" name="Metadato" visibility="public">
+      <ownedAttribute xmi:id="_3-EIEOWFEeuwZNte6Paa1A" name="alias" visibility="private"/>
+      <ownedAttribute xmi:id="_3_coIOWFEeuwZNte6Paa1A" name="sourceField" visibility="private"/>
+      <ownedAttribute xmi:id="_4B9JkOWFEeuwZNte6Paa1A" name="type" visibility="private"/>
+      <ownedOperation xmi:id="_5s2lIOWFEeuwZNte6Paa1A" name="getAlias"/>
+      <ownedOperation xmi:id="_5zQvIOWFEeuwZNte6Paa1A" name="getSourceField"/>
+      <ownedOperation xmi:id="_541LoOWFEeuwZNte6Paa1A" name="getType"/>
+      <ownedOperation xmi:id="_A6pBgOWGEeuwZNte6Paa1A" name="setType">
+        <ownedParameter xmi:id="_IN2wcOWGEeuwZNte6Paa1A" name="type"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_A_maAOWGEeuwZNte6Paa1A" name="setAlias">
+        <ownedParameter xmi:id="_JgPlYOWGEeuwZNte6Paa1A" name="alias"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_BC4-kOWGEeuwZNte6Paa1A" name="setSourceField">
+        <ownedParameter xmi:id="_KwOmkOWGEeuwZNte6Paa1A" name="sourceField"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_BGd3AOWGEeuwZNte6Paa1A" name="ToString"/>
+      <ownedOperation xmi:id="_BM4oEOWGEeuwZNte6Paa1A" name="Metadato">
+        <ownedParameter xmi:id="_NRheoOWGEeuwZNte6Paa1A" name="alias"/>
+        <ownedParameter xmi:id="_NW2qkOWGEeuwZNte6Paa1A" name="sourceField"/>
+        <ownedParameter xmi:id="_NcNEoOWGEeuwZNte6Paa1A" name="type"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_VA4-EOWGEeuwZNte6Paa1A" name="Record" visibility="public">
+      <ownedAttribute xmi:id="_ZOvekOWGEeuwZNte6Paa1A" name="id" visibility="private"/>
+      <ownedAttribute xmi:id="_ZQ9sIOWGEeuwZNte6Paa1A" name="inizio" visibility="private"/>
+      <ownedAttribute xmi:id="_ZW58EOWGEeuwZNte6Paa1A" name="fine" visibility="private"/>
+      <ownedAttribute xmi:id="_ZaHBEOWGEeuwZNte6Paa1A" name="codiciAula" visibility="private"/>
+      <ownedAttribute xmi:id="_Zb7mAOWGEeuwZNte6Paa1A" name="note" visibility="private"/>
+      <ownedOperation xmi:id="_knWVkOWGEeuwZNte6Paa1A" name="getId"/>
+      <ownedOperation xmi:id="_kqskgOWGEeuwZNte6Paa1A" name="setId">
+        <ownedParameter xmi:id="_mk0u4OWGEeuwZNte6Paa1A" name="id"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_ktwfkOWGEeuwZNte6Paa1A" name="getInizio"/>
+      <ownedOperation xmi:id="_kw3d8OWGEeuwZNte6Paa1A" name="setInizio">
+        <ownedParameter xmi:id="_qLZM8OWGEeuwZNte6Paa1A" name="inizio"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_k0FxEOWGEeuwZNte6Paa1A" name="getFine"/>
+      <ownedOperation xmi:id="_k3NWgOWGEeuwZNte6Paa1A" name="setFine">
+        <ownedParameter xmi:id="_swrNIOWGEeuwZNte6Paa1A" name="fine"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_k8HrsOWGEeuwZNte6Paa1A" name="getCodiciAula"/>
+      <ownedOperation xmi:id="_k_oSsOWGEeuwZNte6Paa1A" name="setCodiciAula">
+        <ownedParameter xmi:id="_vOIuEOWGEeuwZNte6Paa1A" name="codiciAula"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_lG3jIOWGEeuwZNte6Paa1A" name="setNote">
+        <ownedParameter xmi:id="_xAjG4OWGEeuwZNte6Paa1A" name="note"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_wQrJIOWGEeuwZNte6Paa1A" name="getNote"/>
+      <ownedOperation xmi:id="_z50aEOWGEeuwZNte6Paa1A" name="Record">
+        <ownedParameter xmi:id="_1-QXAOWGEeuwZNte6Paa1A" name="id"/>
+        <ownedParameter xmi:id="_2dKgkOWGEeuwZNte6Paa1A" name="inizio"/>
+        <ownedParameter xmi:id="_2gux8OWGEeuwZNte6Paa1A" name="fine"/>
+        <ownedParameter xmi:id="_2kt6EOWGEeuwZNte6Paa1A" name="codiciAula"/>
+        <ownedParameter xmi:id="_2prSkOWGEeuwZNte6Paa1A" name="note"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_0WIioOWGEeuwZNte6Paa1A" name="getCol">
+        <ownedParameter xmi:id="_6p2jcOWGEeuwZNte6Paa1A" name="scelta"/>
+      </ownedOperation>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_9yYaoOWGEeuwZNte6Paa1A" name="ProgettoSpringOop">
+    <packagedElement xmi:type="uml:Class" xmi:id="_EoTJkOWHEeuwZNte6Paa1A" name="ProgettoSpringOopApplication" visibility="public"/>
+  </packagedElement>
+</uml:Model>
