@@ -13,7 +13,7 @@ Il programma è un applicazione spring che all'avvio scaricherà un dataset in f
 ## Utilizzo
 Per utilizzare il programma occorre eseguire il file `jar`, poi visitare `http://localhost:8080`. In base al percorso si potranno seguire diverse operazioni:
 - #### `http://localhost:8080/dati`
- - Deve essere eseguito prima di ogni altra operazione
+ - DEVE ESSERE ESEGUITO PRIMA DI OGNI ALTRA OPERAZIONE IN MODO DA POPOLARE LA LISTA DI OGGETTI
  - Restituisce tutti i record del dataset in formato json
  - Non sono necessari parametri aggiuntivi
 - #### `http://localhost:8080/meta`
