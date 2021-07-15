@@ -31,7 +31,7 @@ public class RestfulController {
 	public ArrayList<Record> tempo(@RequestParam(name="op") String op,
 			@RequestParam(name="col", required=false) String col,
 			@RequestParam(name="val", required=false) String val,
-			@RequestParam(name="vett", required=false) String val2,
+			@RequestParam(name="val2", required=false) String val2,
 			ArrayList<Record> lista) throws JsonParseException, JsonMappingException, IOException {
 		switch (op){
 		case "$not": return GestDati.filtro(lista1, col, val);

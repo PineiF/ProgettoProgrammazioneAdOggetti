@@ -27,7 +27,7 @@ Per utilizzare il programma occorre eseguire il file `jar`, poi visitare `http:/
    - $in: via querystring si passano i parametri `col` (seleziona la colonna desiderata) e `val`. Verranno restituiti tutti i records in cui nell'attributo specificato è presente `val`
    - $gt: via querystring si passano i parametri `col` (seleziona la colonna desiderata) e `val`. Verranno restituiti i records in cui l'attributo specificato è maggiore di `val`
    - $lte: via querystring si passano i parametri `col` (seleziona la colonna desiderata) e `val`. Verranno restituiti i records in cui l'attributo specificato è minore di `val`
-   - $or: via querystring si passano i parametri `col` (seleziona la colonna desiderata) `val` e `vett`. Verranno restituiti i records in cui è presente almeno uno dei due attributi specificati.
+   - $or: via querystring si passano i parametri `col` (seleziona la colonna desiderata) `val` e `val2`. Verranno restituiti i records in cui è presente almeno uno dei due attributi specificati.
 
  
  
