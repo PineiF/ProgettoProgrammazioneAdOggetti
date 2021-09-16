@@ -37,5 +37,5 @@ Per utilizzare il programma occorre eseguire il file `jar`, poi visitare `http:/
    - $bt:  via querystring si passano i parametri `col` (seleziona la colonna desiderata), `val` e 'val2'. Verranno restituiti i records che hanno, nella colonna 'col' un valore maggiore di 'val' e minore di 'val2'
    - $or: via querystring si passano i parametri `col` (seleziona la colonna desiderata) `val` e `val2`. Verranno restituiti i records in cui è presente almeno uno dei due attributi specificati.
 
-- Il file .jar è presente nella directory releases.
+- Il file .jar è presente nella sezione releases.
  
