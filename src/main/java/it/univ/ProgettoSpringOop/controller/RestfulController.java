@@ -93,7 +93,7 @@ public class RestfulController {
 			{ String[] valori = {val, val2, val3, val4, val5};
 			return GestDati.filtroIN(lista1, col, valori);}
 		} catch(ArrayIndexOutOfBoundsException  e) {
-				System.out.println("Errore coi file mandati in input!");
+				System.out.println("Errore coi valori mandati in input!");
 				return null;
 			}
 		
@@ -101,7 +101,7 @@ public class RestfulController {
 			{ String[] valori = {val, val2, val3, val4, val5};
 		return GestDati.filtroNIN(lista1, col, valori);}
 		}catch(ArrayIndexOutOfBoundsException  e) {
-			System.out.println("Errore coi file mandati in input!");
+			System.out.println("Errore coi valori mandati in input!");
 			return null;
 		}
 		
