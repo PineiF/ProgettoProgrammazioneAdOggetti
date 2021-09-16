@@ -280,19 +280,20 @@ public class GestDati {
 		 */
 		public static ArrayList<Record> between(List<Record> lista, String campo, String valore, String valore2){
 			List <Record> listaF = new ArrayList<Record>();
-			float minore=0;
-			float maggiore=0;
+			float LimMin=0;
+			float LimMagg=0;
 			try {
 			for (Record i : lista) {
-				minore=i.getCol(campo).compareTo(valore);
-				maggiore=i.getCol(campo).compareTo(valore2);
-						if(minore>=0 && maggiore<=0){
+				LimMin=i.getCol(campo).compareTo(valore);
+				LimMagg=i.getCol(campo).compareTo(valore2);
+						if(LimMin>=0 && LimMagg<=0)
 					listaF.add(i);
-				}
+				
 			}
-			}catch(RuntimeException e) {
-				System.out.println("Errore durante l'operazione del filtro BW!");
+			}catch (RuntimeException e) {
+				System.out.println("Errore durate l'operazione BT!");
 			}
+
 			return (ArrayList<Record>) listaF;
 		}
 		
