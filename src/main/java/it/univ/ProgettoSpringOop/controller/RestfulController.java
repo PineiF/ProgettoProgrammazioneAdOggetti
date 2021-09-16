@@ -26,7 +26,9 @@ public class RestfulController {
 	@GetMapping("/dati")
 	public ArrayList<Record> parsingDati() throws IOException {
 		try {
+			if(lista1.isEmpty()) { //controlla che la lista è vuota e se lo è viene riempita da capo col parsing del csv
 		GestDati.RDdataset("https://dati.unibo.it/dataset/98c4b1f8-fe64-4514-8c9e-eedfd170952f/resource/71598df5-d1d6-411b-88ed-b66097b0e79d/download/orari_2018.csv", lista1);
+			}
 				}catch(RuntimeException e) {
 			System.out.println("Errore durante la creazione dell'arraylist");
 		}
@@ -52,7 +54,7 @@ public class RestfulController {
 	public int conta(@RequestParam(name="col", required=false) String col,
 			@RequestParam(name="val", required=false) String val,
 			ArrayList<Record> lista) throws IOException{	
-		if(lista1==null) {
+		if(lista1.isEmpty()) { //praticamente controlla se la lista originale non è vuota e se lo è allora la si riempie 
 			GestDati.RDdataset("https://dati.unibo.it/dataset/98c4b1f8-fe64-4514-8c9e-eedfd170952f/resource/71598df5-d1d6-411b-88ed-b66097b0e79d/download/orari_2018.csv", lista1);
 		}
 		int conta=GestDati.conteggio(lista1, col, val);
@@ -84,7 +86,7 @@ public class RestfulController {
 			@RequestParam(name="val4", required=false) String val4,			
 			@RequestParam(name="val5", required=false) String val5,
 			ArrayList<Record> lista) throws JsonParseException, JsonMappingException, IOException {
-		if(lista1==null)
+		if(lista1.isEmpty())
 			GestDati.RDdataset("https://dati.unibo.it/dataset/98c4b1f8-fe64-4514-8c9e-eedfd170952f/resource/71598df5-d1d6-411b-88ed-b66097b0e79d/download/orari_2018.csv", lista1);
 		switch (op){
 		case "$not": return GestDati.filtroNOT(lista1, col, val);
@@ -109,13 +111,15 @@ public class RestfulController {
 		
 		case "$gt" : return GestDati.maggiore(lista1, col, val);
 		
+		case "$lt" : return GestDati.minore(lista1, col, val);
+		
 		case "$lte": return GestDati.minoreuguale(lista1, col, val);
 		
 		case "$or": return GestDati.OR(lista1, col, val, val2);
 		
 		case "$and": return GestDati.AND(lista1, col, val, col2, val2);
 		
-		case "$bw": return GestDati.between(lista1, col, val, val2);
+		case "$bt": return GestDati.between(lista1, col, val, val2);
 		}
 		return null;
 		}
