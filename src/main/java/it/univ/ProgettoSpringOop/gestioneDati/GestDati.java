@@ -135,7 +135,7 @@ public class GestDati {
 		for(String j:valori) {
 			if(j!=null) {
 		for (Record i : lista) {
-			if(i.getCol(campo).equals(j)){
+			if(!i.getCol(campo).equals(j)){
 				listaF.add(i);
 			}
 		}
@@ -331,7 +331,7 @@ public class GestDati {
 		public static ArrayList<Record> AND(List<Record> lista, String campo, String valore, String campo2, String valore2){
 			List <Record> listaF = new ArrayList<Record>();
 			for (Record i : lista) {
-				if(i.getCol(campo).equals(valore) && i.getCol(campo).equals(valore2)) {
+				if(i.getCol(campo).equals(valore) && i.getCol(campo2).equals(valore2)) {
 					listaF.add(i);
 				}
 			}
